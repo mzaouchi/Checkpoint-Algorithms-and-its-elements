@@ -1,0 +1,28 @@
+ALGORITHM number_char_words_vowels 
+VAR
+    vowels : INTEGER := 0;
+    l,words  : INTEGER := 1;
+    carac : CHAR := 'Bonjour Mahmoud Zaouchi.';
+BEGIN
+
+
+    WHILE (carac<>'.') DO
+        l:=l+1;
+
+        IF (carac=="a" OR carac=="e" OR carac=="i" OR carac=="o" OR carac=="u") THEN
+            vowels := vowels+1;
+        END_IF
+
+        IF (carac==" ") THEN
+            words := words+1; 
+        END_IF
+
+    END_WHILE
+               
+
+    Write("La longueure est : ",l);
+    Write("Le nombre des mots est",words);
+    Write("Le nombre des voyelles est",vowels);
+
+END
+
